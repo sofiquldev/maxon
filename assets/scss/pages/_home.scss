@@ -1,0 +1,507 @@
+// Hero banner section
+.banner {
+  background-color: #f7f7f7;
+  // padding: 13% 0 10%;
+  padding: 135px 0 65px;
+
+  .content-box {
+    .tagline {
+      font-family: $roboto;
+      font-size: 18px;
+      line-height: 70px;
+      margin-bottom: 0;
+      font-weight: $fontBold;
+      text-transform: capitalize;
+    }
+
+    h2 {
+      font-size: 60px;
+      line-height: 70px;
+      margin-bottom: 25px;
+      font-weight: $fontBold;
+
+      @include mq(991) {
+        font-size: 38px;
+        line-height: 50px;
+      }
+      @include mq(479) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+      padding-right: 66px;
+    }
+  }
+
+  .ban-img {
+    margin-right: -100px;
+    @include mq(767) {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+//////////////////////
+// about section
+// About section style
+.about {
+  padding-top: 100px;
+
+  .about-img-group {
+    position: relative;
+
+    .about-img-bg {
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      max-width: 545px;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    .about-img-1 {
+      margin-top: 80px;
+
+      @include mq(767) {
+        margin-bottom: 30px;
+      }
+    }
+    .about-img-2 {
+      padding-right: 100px;
+      margin-bottom: 70px;
+    }
+    h3 {
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: $fontBold;
+      margin-bottom: 0;
+
+      @include mq(479) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+
+    @include mq(991) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+////////////////////////////
+// Features section
+.features {
+  .iconBox {
+    border: 5px solid #f6f7fb;
+    border-radius: 5px;
+    padding: 40px 25px;
+    position: relative;
+    text-align: center;
+    transition: $transition;
+    cursor: pointer;
+
+    .icon {
+      border-radius: 50%;
+      display: block;
+      font-size: 27px;
+      line-height: 70px;
+      margin: 0 auto 30px;
+      height: 70px;
+      width: 70px;
+    }
+    a {
+      color: $darkBlueColor;
+      display: block;
+      font-family: $poppins;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+
+    // IconBox hover
+    &:hover {
+      border-color: transparent;
+      box-shadow: 0 0 10px rgba(#000, 0.07);
+    }
+
+    @include mq(991) {
+      margin-bottom: 30px;
+    }
+  }
+  // box-shaddow when its hover
+  .ib-one {
+    .icon {
+      color: #ff7214;
+      background-color: #ffeee2;
+    }
+    &:hover {
+      box-shadow: 0 0 25px rgba(255, 114, 20, 0.1);
+    }
+  }
+  .ib-two {
+    .icon {
+      color: #9165ff;
+      background-color: #ebe3ff;
+    }
+    &:hover {
+      box-shadow: 0 0 25px rgba(139, 94, 255, 0.1);
+    }
+  }
+  .ib-three {
+    .icon {
+      color: #178efd;
+      background-color: #d5f8ff;
+    }
+    &:hover {
+      box-shadow: 0 0 25px rgba(23, 142, 253, 0.1);
+    }
+  }
+  .ib-four {
+    .icon {
+      color: #ff1481;
+      background-color: #ffedf5;
+    }
+    &:hover {
+      box-shadow: 0 0 25px rgba(255, 20, 129, 0.1);
+    }
+  }
+}
+
+////////////////////////
+// Wroks section
+.works {
+  .pb-50 {
+    padding-bottom: 80px;
+    @include mq(991) {
+      padding-bottom: 60px;
+    }
+    @include mq(767) {
+      padding-bottom: 40px;
+    }
+  }
+
+  .content-box-fluid {
+    &.right-centent {
+      padding-left: 40px;
+    }
+    &.left {
+      margin-left: auto;
+      padding-right: 40px;
+      @include mq(767) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .read-more {
+    margin-top: 40px;
+  }
+}
+
+//////////////////////////
+// facts section
+.funfacts {
+  background-color: #162b45;
+  margin: 50px auto;
+  padding: 105px 0;
+  @include mq(991) {
+    padding-bottom: 35px;
+  }
+
+  .single-fun {
+    position: relative;
+
+    img {
+      max-width: 65px;
+      margin-bottom: 30px;
+      @include mq(575) {
+        margin: 0 auto 30px;
+      }
+    }
+    p {
+      padding-right: 10px;
+      align-items: center;
+      color: #fff;
+      display: inline-flex;
+      font-size: 22px;
+      font-weight: $fontBold;
+      line-height: 30px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      position: relative;
+
+      span {
+        font-family: $roboto;
+        font-size: 60px;
+        font-weight: 700;
+        margin-right: 20px;
+      }
+      @include mq(575) {
+        flex-direction: column;
+        span {
+          margin: 0;
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    @include mq(991) {
+      margin-bottom: 60px;
+    }
+    @include mq(575) {
+      text-align: center;
+    }
+  }
+}
+
+/////////////////////////////
+// Testimonial section
+.tesimonial {
+  .video-box {
+    @include mq(767) {
+      margin-bottom: 40px;
+    }
+  }
+  .test-caro {
+    max-width: 710px;
+    width: 100%;
+
+    @include min-mq(768) {
+      padding-left: 60px;
+    }
+
+    .single-test {
+      .avater-wrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        
+        .avatar {
+          max-width: 160px;
+          height: 160px;
+          margin-right: 10px;
+        }
+        .pagination {
+          align-items: center;
+          position: relative;
+          height: 40px;
+          img {
+            width: 38px;
+          }
+          &::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffd5b9;
+            position: absolute;
+            left: 100px;
+            z-index: -2;
+          }
+        }
+        #prev {
+          transform: rotate(180deg);
+          margin: 45px;
+        }
+      }
+      p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 0;
+      }
+
+      .info {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+
+        .company-logo {
+          max-width: 119px;
+          margin-right: 40px;
+        }
+        .name {
+          * {
+            margin: 0;
+          }
+          h5 {
+            font-size: 22px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//////////////////
+// Team section
+.team {
+  .single-memb {
+    padding: 15px;
+    text-align: center;
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+  .memb-details {
+    span {
+      color: #888;
+      display: block;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+  .memb-social {
+    a {
+      color: #999;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 0.8;
+      position: relative;
+      padding: 0 10px;
+
+      &:not(:first-child):before {
+        @include pseudo($t: 3px, $l: -5px);
+        background-color: #d9dadb;
+        border-radius: 50%;
+        height: 6px;
+        width: 6px;
+      }
+    }
+  }
+}
+.single-memb {
+  border: 5px solid #f6f7fb;
+  position: relative;
+
+  h5 {
+    margin-bottom: 10px;
+  }
+  h5,
+  a {
+    color: $darkBlueColor;
+    display: block;
+    font-size: 22px;
+  }
+  a:hover {
+    color: $primaryColor;
+  }
+
+  @include mq(767) {
+    margin-bottom: 30px;
+  }
+}
+
+//////////////////////
+// Latest News section
+.post-item {
+  @extend .single-memb;
+  h5 {
+    margin-bottom: 25px;
+  }
+  h5,
+  a {
+    font-size: 21px;
+  }
+  .post-content {
+    padding: 35px 25px;
+  }
+  .meta-tag {
+    margin-bottom: 13px;
+
+    a {
+      color: #888;
+      display: inline-block;
+      font-size: 12px;
+      line-height: 0.8;
+      text-transform: uppercase;
+      padding: 0 15px;
+      position: relative;
+
+      i {
+        color: $primaryColor;
+        font-size: 13px;
+        margin-right: 10px;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    &:first-of-type {
+      a:first-child:after {
+        @include pseudo($l: Author);
+        background-color: #d9dadb;
+        height: 100%;
+        width: 2px;
+      }
+    }
+  }
+}
+
+///////////////////
+// Contact section
+.contact {
+  .section-heading {
+    margin-bottom: 50px;
+    margin-top: 25px;
+    h3 {
+      font-size: 30px;
+    }
+    text-align: left;
+  }
+  .contact-info {
+    span,
+    a {
+      color: #888888;
+      display: block;
+
+      img {
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        margin-right: 20px;
+      }
+    }
+    a {
+      margin-top: 30px;
+    }
+
+    @include mq(767) {
+      margin-bottom: 30px;
+    }
+  }
+
+  form {
+    .form-control {
+      border: 1px solid #e5e6ea;
+      border-radius: 0;
+      padding: 20px 25px;
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 30px;
+      height: 60px;
+    }
+    textarea.form-control {
+      height: 180px;
+    }
+  }
+}
+
+/////////////////
+// Partners section
+.partners-logo {
+  img {
+    max-width: 186px;
+    width: 100%;
+  }
+}

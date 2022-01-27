@@ -1,0 +1,269 @@
+body {
+  min-height: 100vh;
+}
+// container customize
+@include min-mq(1400) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+p {
+  font-size: 15px;
+  line-height: 27px;
+  color: $secondaryTextColor;
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $headeingColor;
+  font-family: $poppins;
+  font-weight: fontBold;
+}
+section {
+  display: block;
+  position: relative;
+  padding: 70px 0;
+  width: 100%;
+}
+section {
+  @include mq(767) {
+    padding-bottom: 50px;
+  }
+}
+
+.section-heading {
+  margin-bottom: 80px;
+
+  .section-title {
+    font-family: $poppins;
+    font-size: 42px;
+    font-weight: $fontBold;
+    margin-bottom: 0;
+
+    @include mq(767) {
+      font-size: 30px;
+    }
+    @include mq(479) {
+      font-size: 26px;
+    }
+  }
+}
+
+@include min-mq(768) {
+  .nopadd-ltf {
+    padding-left: 0;
+  }
+  .nopadd-rth {
+    padding-right: 0;
+  }
+  .nopadd {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.nopadd-btm {
+  padding-bottom: 0 !important;
+}
+
+.btn {
+  font-family: $poppins;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: $fontMid;
+  line-height: 0.8;
+  text-transform: uppercase;
+  // min-width: 200px;
+  padding: 22.5px 40px;
+
+  @include min-mq {
+    &:first-of-type {
+      margin-right: 25px;
+    }
+  }
+  &-filled {
+    background-color: $primaryColor;
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &-default {
+    background-color: $primaryColor;
+    border-radius: 50px;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  &-round {
+    border-radius: 99px;
+  }
+
+  &-outline {
+    border: 2px solid #fff;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.icon-left i {
+    line-height: 0.8;
+    margin-right: 20px;
+  }
+}
+
+.tagline {
+  color: $primaryColor;
+  display: block;
+  font-size: 14px;
+  font-weight: $fontBold;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+  @include mq(991) {
+    font-size: 12px;
+  }
+  &.bar {
+    padding-left: 70px;
+    &:after {
+      background-color: $primaryColor;
+      @include pseudo(50%);
+      transform: translateY(-50%);
+      height: 2px;
+      width: 50px;
+    }
+  }
+}
+
+.content-box {
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 23px;
+    font-weight: $fontBold;
+    @include mq(479) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: $fontMid;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .btn {
+    margin-top: 25px;
+  }
+  &-fluid {
+    @extend .content-box;
+    width: 100%;
+    @include min-mq(768) {
+      max-width: 505px;
+    }
+  
+    &.right {
+      @include min-mq(768) {
+        float: right;
+      }
+    }
+  }
+}
+
+
+
+.circle {
+  border-radius: 50%;
+}
+
+.video-box {
+  position: relative;
+
+  &:after {
+    @include pseudo;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#162b45, 0.7);
+  }
+
+  .video-in {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+
+    span {
+      color: #fff;
+    }
+  }
+}
+.video-btn {
+  background-color: $primaryColor;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto 15px;
+  position: relative;
+  line-height: 65px;
+  height: 60px;
+  width: 60px;
+
+  &::after {
+    @include pseudo;
+    animation: beat infinite 1.2s;
+    height: 100%;
+    width: 100%;
+    background-color: $primaryColor;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $darkBlueColor;
+  }
+}
+
+@keyframes beat {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.read-more {
+  color: $darkBlueColor;
+  font-size: 14px;
+  font-weight: $fontSemi;
+  text-transform: uppercase;
+  display: block;
+
+  img {
+    width: 31px;
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  &:hover {
+    color: $primaryColor;
+  }
+}

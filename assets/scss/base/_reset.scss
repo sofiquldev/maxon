@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+a {
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}

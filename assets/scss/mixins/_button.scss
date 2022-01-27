@@ -1,0 +1,52 @@
+@mixin btn($color: $primaryColor) {
+  .btn {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 0.8;
+    text-transform: capitalize;
+    // min-width: 200px;
+    padding: 20px 40px;
+
+    @include min-mq {
+        &:first-of-type {
+            margin-right: 25px;
+        }
+    }
+    &-filled {
+      background-color: $color;
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    &-default {
+      background-color: $color;
+      border-radius: 50px;
+      color: #fff;
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    &-round {
+      border-radius: 50px;
+    }
+
+    &-outline {
+      border: 2px solid #fff;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &.icon-left i {
+      line-height: 0.8;
+      margin-right: 20px;
+    }
+  }
+}

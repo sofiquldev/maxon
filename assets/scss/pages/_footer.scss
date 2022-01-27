@@ -1,0 +1,103 @@
+.footer {
+  position: relative;
+
+  .logo {
+    max-width: 122px;
+    margin-bottom: 45px;
+  }
+  .widget-title {
+    color: #fff;
+  }
+
+  // Widgets
+  .widget {
+    .widget-title {
+      font-size: 22px;
+      font-weight: $fontSemi;
+      margin-bottom: 35px;
+    }
+
+    p {
+      color: #999;
+    }
+  }
+  .widget-navigation {
+    li {
+      a {
+        color: #999;
+        display: block;
+        margin-bottom: 5px;
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+
+    @include mq(767) {
+      margin-bottom: 30px;
+    }
+  }
+  .widget-insta-feed {
+    ul {
+      padding-top: 10px;
+      @include flexbox($jc: start);
+
+      li {
+        flex-basis: calc(100% / 3 - 10px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &:nth-child(3n - 3) {
+          margin-right: 0;
+        }
+      }
+    }
+    @include mq(767) {
+      margin-bottom: 30px;
+    }
+  }
+  .widget-address {
+    address {
+      position: relative;
+    }
+    span,
+    a {
+      color: #999;
+      display: block;
+      line-height: 23px;
+      position: relative;
+      padding-left: 30px;
+
+      i {
+        color: #fff;
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+    }
+    a {
+      margin-top: 10px;
+    }
+  }
+  .foo-top {
+    background-color: #162b45;
+    padding: 100px 0;
+  }
+
+  .foo-btm {
+    background-color: #10233a;
+
+    .copyright {
+      color: #888;
+      font-size: 15px;
+      line-height: 24px;
+      margin-bottom: 0;
+      padding: 20px 0;
+
+      a {
+        color: $primaryColor;
+      }
+    }
+  }
+}
